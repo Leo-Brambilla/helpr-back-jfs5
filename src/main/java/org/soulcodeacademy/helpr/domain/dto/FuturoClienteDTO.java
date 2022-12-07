@@ -5,7 +5,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-public class FuturoClienteDTO extends ClienteDTO {
+public class FuturoClienteDTO {
 
     @Column(length = 120)
     @NotNull(message = "O nome é obrigatorio")
