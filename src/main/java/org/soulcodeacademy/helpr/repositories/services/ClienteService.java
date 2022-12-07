@@ -1,10 +1,10 @@
-package org.soulcodeacademy.helpr.services;
+package org.soulcodeacademy.helpr.repositories.services;
 
 import org.soulcodeacademy.helpr.domain.Cliente;
 import org.soulcodeacademy.helpr.domain.dto.ClienteDTO;
 import org.soulcodeacademy.helpr.repositories.ClienteRepository;
-import org.soulcodeacademy.helpr.services.errors.ParametrosInsuficientesError;
-import org.soulcodeacademy.helpr.services.errors.RecursoNaoEncontradoError;
+import org.soulcodeacademy.helpr.repositories.services.errors.ParametrosInsuficientesError;
+import org.soulcodeacademy.helpr.repositories.services.errors.RecursoNaoEncontradoError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

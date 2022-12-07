@@ -1,4 +1,4 @@
-package org.soulcodeacademy.helpr.services;
+package org.soulcodeacademy.helpr.repositories.services;
 
 import org.soulcodeacademy.helpr.domain.Chamado;
 import org.soulcodeacademy.helpr.domain.Cliente;
@@ -6,8 +6,8 @@ import org.soulcodeacademy.helpr.domain.Funcionario;
 import org.soulcodeacademy.helpr.domain.dto.ChamadoDTO;
 import org.soulcodeacademy.helpr.domain.enums.StatusChamado;
 import org.soulcodeacademy.helpr.repositories.ChamadoRepository;
-import org.soulcodeacademy.helpr.services.errors.ParametrosInsuficientesError;
-import org.soulcodeacademy.helpr.services.errors.RecursoNaoEncontradoError;
+import org.soulcodeacademy.helpr.repositories.services.errors.ParametrosInsuficientesError;
+import org.soulcodeacademy.helpr.repositories.services.errors.RecursoNaoEncontradoError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

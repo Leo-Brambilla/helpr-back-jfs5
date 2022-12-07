@@ -1,4 +1,4 @@
-package org.soulcodeacademy.helpr.services.errors;
+package org.soulcodeacademy.helpr.repositories.services.errors;
 
 // Esta classe representa o erro de regra de negócio
 // quando não encontramos cargos, clientes, funcionarios, chamados

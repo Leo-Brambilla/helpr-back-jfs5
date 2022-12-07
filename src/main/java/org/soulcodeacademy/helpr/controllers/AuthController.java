@@ -2,7 +2,7 @@ package org.soulcodeacademy.helpr.controllers;
 
 import org.soulcodeacademy.helpr.domain.dto.CredenciaisDTO;
 import org.soulcodeacademy.helpr.domain.dto.TokenDTO;
-import org.soulcodeacademy.helpr.services.AuthService;
+import org.soulcodeacademy.helpr.repositories.services.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,6 +1,6 @@
 package org.soulcodeacademy.helpr.config;
 
-import org.soulcodeacademy.helpr.services.PopulateService;
+import org.soulcodeacademy.helpr.repositories.services.PopulateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

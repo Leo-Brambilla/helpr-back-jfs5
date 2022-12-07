@@ -1,4 +1,4 @@
-package org.soulcodeacademy.helpr.services.errors;
+package org.soulcodeacademy.helpr.repositories.services.errors;
 
 // Esta classe de erro representa quando uma operação está
 // faltando dados. Ex: atualizar -> idFuncionario nulo

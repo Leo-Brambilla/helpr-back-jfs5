@@ -1,4 +1,4 @@
-package org.soulcodeacademy.helpr.services;
+package org.soulcodeacademy.helpr.repositories.services;
 
 import org.soulcodeacademy.helpr.domain.dto.CredenciaisDTO;
 import org.soulcodeacademy.helpr.domain.dto.TokenDTO;

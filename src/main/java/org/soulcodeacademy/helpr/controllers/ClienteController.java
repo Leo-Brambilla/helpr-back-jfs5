@@ -2,7 +2,7 @@ package org.soulcodeacademy.helpr.controllers;
 
 import org.soulcodeacademy.helpr.domain.Cliente;
 import org.soulcodeacademy.helpr.domain.dto.ClienteDTO;
-import org.soulcodeacademy.helpr.services.ClienteService;
+import org.soulcodeacademy.helpr.repositories.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

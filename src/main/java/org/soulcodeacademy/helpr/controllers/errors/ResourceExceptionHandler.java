@@ -1,7 +1,7 @@
 package org.soulcodeacademy.helpr.controllers.errors;
 
-import org.soulcodeacademy.helpr.services.errors.ParametrosInsuficientesError;
-import org.soulcodeacademy.helpr.services.errors.RecursoNaoEncontradoError;
+import org.soulcodeacademy.helpr.repositories.services.errors.ParametrosInsuficientesError;
+import org.soulcodeacademy.helpr.repositories.services.errors.RecursoNaoEncontradoError;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
