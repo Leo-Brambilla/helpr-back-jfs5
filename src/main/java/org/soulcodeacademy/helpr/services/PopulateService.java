@@ -97,9 +97,11 @@ public class PopulateService {
         ch5.setFuncionario(f6);
         ch5.setStatus(StatusChamado.CONCLUIDO);
 
+
         ch6.setCliente(cl1);
         ch6.setFuncionario(f10);
         ch6.setStatus(StatusChamado.CONCLUIDO);
+
 
         ch7.setCliente(cl1);
         ch7.setFuncionario(f10);
