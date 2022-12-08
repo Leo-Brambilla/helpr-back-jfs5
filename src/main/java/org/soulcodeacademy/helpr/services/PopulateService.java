@@ -76,6 +76,7 @@ public class PopulateService {
         ch2.setCliente(cl2);
         ch2.setFuncionario(f1);
         ch2.setStatus(StatusChamado.ATRIBUIDO);
+
         ch3.setCliente(cl1);
         ch3.setFuncionario(f2);
         ch3.setStatus(StatusChamado.RECEBIDO);
@@ -96,9 +97,15 @@ public class PopulateService {
         ch5.setFuncionario(f6);
         ch5.setStatus(StatusChamado.CONCLUIDO);
 
+
         ch6.setCliente(cl1);
         ch6.setFuncionario(f10);
         ch6.setStatus(StatusChamado.CONCLUIDO);
+
+
+        ch7.setCliente(cl1);
+        ch7.setFuncionario(f10);
+        ch7.setStatus(StatusChamado.ARQUIVADO);
 
 
 
@@ -107,9 +114,9 @@ public class PopulateService {
 
         // vamos persistir as entidades = salvar no banco
         this.cargoRepository.saveAll(List.of(c1, c2, c3));
-        this.funcionarioRepository.saveAll(List.of(f1, f2));
-        this.clienteRepository.saveAll(List.of(cl1, cl2));
-        this.chamadoRepository.saveAll(List.of(ch1, ch2));
+        this.funcionarioRepository.saveAll(List.of(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10));
+        this.clienteRepository.saveAll(List.of(cl1, cl2, cl3, cl4));
+        this.chamadoRepository.saveAll(List.of(ch1, ch2, ch3, ch4,ch5,ch6,ch7));
 
 
     }
