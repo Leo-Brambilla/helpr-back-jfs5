@@ -45,4 +45,6 @@ public class FuturoClienteService {
         FuturoCliente futuroCliente = this.getFuturoCliente(idFuturoCliente);
         this.futuroClienteRepository.delete(futuroCliente);
     }
+
+    public List<FuturoCliente> listarPorNome(String nome) { return this.futuroClienteRepository.findByNome(nome); }
 }

@@ -15,4 +15,5 @@ public interface FuturoClienteRepository extends JpaRepository<FuturoCliente, In
 
     List<FuturoCliente> findByEmail(String email);
 
+    List<FuturoCliente> findByNome(String nome);
 }
