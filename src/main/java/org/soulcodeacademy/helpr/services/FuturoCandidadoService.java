@@ -1,7 +1,8 @@
 package org.soulcodeacademy.helpr.services;
 
 import org.soulcodeacademy.helpr.domain.FuturoCandidato;
-import org.soulcodeacademy.helpr.domain.FuturoCandidatoDTO;
+
+import org.soulcodeacademy.helpr.domain.dto.FuturoCandidatoDTO;
 import org.soulcodeacademy.helpr.domain.enums.Setor;
 import org.soulcodeacademy.helpr.repositories.FuturoCandidatoRepository;
 import org.soulcodeacademy.helpr.services.errors.RecursoNaoEncontradoError;
@@ -25,12 +26,10 @@ public class FuturoCandidadoService {
         return  this.futuroCandidatoRepository.findById(idCandidato)
                 .orElseThrow(() -> new RecursoNaoEncontradoError("Não foi possível achar esse candidato."));
     }
-
     //GET -> Filtrar por NOME
     public List<FuturoCandidato> listarPorNome(String nome) {
         return this.futuroCandidatoRepository.findByNomeCompletoContaining(nome);
     }
-
     //GET -> Filtrar pelo SETOR
     public List<FuturoCandidato>listarPorSetor(Setor setor){
         return this.futuroCandidatoRepository.findBySetor(setor);
@@ -39,14 +38,12 @@ public class FuturoCandidadoService {
     public  List<FuturoCandidato>listarPorEmail(String email){
         return this.futuroCandidatoRepository.findByEmail(email);
     }
-
     //POST -> Salvar cada COLABORADOR (Futuro Candidato)
     public FuturoCandidato salvar (FuturoCandidatoDTO dto ){
         FuturoCandidato newCandidato = new FuturoCandidato(null, dto.getNomeCompleto(), dto.getEmail(), dto.getDescricaoHabilidades());
         newCandidato.setSetor(dto.getSetor());
         return  this.futuroCandidatoRepository.save(newCandidato);
     }
-
     //DELETE -> Deletar cada COLABORADOR (Futuro Candidato)
     public void deletar(Integer idFuncionario) {
         FuturoCandidato candidato = this.getCandidato(idFuncionario);

@@ -1,33 +1,25 @@
-package org.soulcodeacademy.helpr.domain;
+package org.soulcodeacademy.helpr.domain.dto;
 
 import org.soulcodeacademy.helpr.domain.enums.Setor;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 public class FuturoCandidatoDTO {
-
-    @NotBlank(message = "nome completo é obrigatório")
+    @NotBlank(message = "O nome completo é obrigatório.")
     private String nomeCompleto;
-
-    @NotBlank(message = "email é obrigatório")
+    @NotBlank(message = "O email é obrigatório.")
     private String email;
-
-
-    @NotBlank(message = "Descrição é obrigatório")
+    @NotBlank(message = "A descrição é obrigatória.")
     private String descricaoHabilidades;
-
-
-    @NotBlank(message = "Setor obrigatório")
+    @NotNull(message = "O setor é obrigatório.")
     private Setor setor;
-
 
     public String getNomeCompleto() {
         return nomeCompleto;
     }
-
     public void setNomeCompleto(String nomeCompleto) {
         this.nomeCompleto = nomeCompleto;
     }
-
     public String getEmail() {
         return email;
     }
@@ -35,7 +27,6 @@ public class FuturoCandidatoDTO {
     public void setEmail(String email) {
         this.email = email;
     }
-
     public String getDescricaoHabilidades() {
         return descricaoHabilidades;
     }
@@ -43,12 +34,10 @@ public class FuturoCandidatoDTO {
     public void setDescricaoHabilidades(String descricaoHabilidades) {
         this.descricaoHabilidades = descricaoHabilidades;
     }
-
     public Setor getSetor() {
         return setor;
     }
-
-    public void setSetor(Setor setor) {
+    public void setSetor(Setor setor){
         this.setor = setor;
     }
 }
