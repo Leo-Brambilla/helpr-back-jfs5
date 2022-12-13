@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@RestController // coletar as requisições
+@RestController
 public class ClienteController {
     @Autowired
     private ClienteService clienteService;
@@ -41,5 +41,3 @@ public class ClienteController {
         this.clienteService.deletar(idCliente);
     }
 }
-// Deserializar => JSON -> Classe
-// Serializar => Classe -> JSON
