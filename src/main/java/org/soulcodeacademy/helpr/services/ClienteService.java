@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service // torna o objeto da classe injetavel
+@Service
 public class ClienteService {
-    @Autowired // injeção
+    @Autowired
     private ClienteRepository clienteRepository;
 
     public List<Cliente> listarTodos() {
@@ -21,13 +21,13 @@ public class ClienteService {
     }
 
     public Cliente getCliente(Integer idCliente) {
-        // SELECT * FROM usuarios WHERE id = ?
+
         return this.clienteRepository.findById(idCliente)
                 .orElseThrow(() -> new RecursoNaoEncontradoError("Cliente não encontrado"));
     }
 
     public Cliente salvar(ClienteDTO dto) {
-        // Criação da entidade Cliente, a partir dos dados validados do DTO
+
         if (dto.getSenha()==null) {
             throw new ParametrosInsuficientesError("Senha nulla");
         }
@@ -58,7 +58,3 @@ public class ClienteService {
     }
 
 }
-
-// Quando usar entidade e dto?
-// Entidade = retorno dos dados
-// DTO = entrada de dados

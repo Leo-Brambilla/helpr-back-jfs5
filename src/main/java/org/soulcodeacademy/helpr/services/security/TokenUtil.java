@@ -11,17 +11,17 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-@Component // instanciar automaticamente o TokenUtil
+@Component
 public class TokenUtil {
-    @Value("${senhaJwt}") // injeta o valor da variável no campo abaixo
+    @Value("${senhaJwt}")
     private String senhaJwt;
 
     @Value("${validadeJwt}")
     private Long validadeJwt;
 
     public String gerarToken(String email, String perfil) {
-        // System.currentTimeMillis() => Pega o momento atual em ms
-        // new Date(System.currentTimeMillis() + this.validadeJwt) => Indica a data futura que o token vai expirar
+
+
         return JWT.create()
                 .withSubject(email)
                 .withClaim("perfil", perfil)
@@ -37,8 +37,8 @@ public class TokenUtil {
     }
 
     public boolean validarToken(String token) {
-        // Caso ocorra erro na linha 42, o token passado é inválido:
-        // Não foi gerado por nós ou expirou
+
+
         try {
             JWT.require(Algorithm.HMAC512(this.senhaJwt))
                     .build()
